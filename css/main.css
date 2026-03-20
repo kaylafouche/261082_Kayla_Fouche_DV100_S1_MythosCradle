@@ -24,7 +24,7 @@ h1, h2, h3, h4, h5, h6{
     src: url("../assets/fonts/Mythology\ Of\ Egypt.otf");
 }
 
-/* NAVBAR */
+/* NAVBAR  ALL PAGES */
 .navbar{
     position: absolute;
     top: 30px;
@@ -76,7 +76,8 @@ h1, h2, h3, h4, h5, h6{
 }
 
 /* HERO SECTION */
-.hero{
+/* HERO HOME SECTION */
+.hero-home{
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -92,17 +93,39 @@ h1, h2, h3, h4, h5, h6{
     background-position: center;
 }
 
-.hero h1{
+.hero-home h1{
     font-family: "TitleFont";
     font-size: 96px;
     color: #e9ad1c;
 }
 
-.hero p{
+.hero-home p{
     font-family: "Metamorphous";
     color: #ffffff;
     font-size: 24px;
     max-width: 500px;
+}
+
+/* HERO ADOPT SECTION */
+.hero-adopt{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    text-align: center;
+
+    height: 40vh;
+    padding-bottom: 40px;
+
+    background-image: url("../assets/img/adoptHeader.png");
+    background-size: cover;
+    background-repeat: none;
+    background-position: center;
+}
+
+.hero-adopt h1{
+    font-family: "TitleFont";
+    font-size: 96px;
+    color: #ffffff;
 }
 
 .featureContainer{
@@ -140,9 +163,9 @@ height: 600px;
 
 .featureText p{
     color: #ffffff;
-    font-size: 16px;
-    font-weight: 200;
-    margin-bottom: 25px;
+    font-weight: 300;
+    margin-bottom: 30px;
+    line-height: 1.8;
 }
 .button{
     display: inline-block;
@@ -186,8 +209,9 @@ height: 600px;
 }
 
 .aboutText p{
-    font-size: 16px;
     font-weight: 300;
+    line-height: 1.8;
+    opacity: 70%;
 }
 
 .aboutImage{
@@ -332,4 +356,24 @@ height: 600px;
 
 .footer hr{
     margin: 40px;
+}
+
+/* ADOPT PAGE */
+
+.intro-adopt{
+    background-color: #002d68;
+    height: 40vh;
+    text-align: center;
+     padding: 60px 10%;
+}
+
+.intro-adopt h2{
+    font-family: 'Metamorphous';
+    color: #e9ad1c;
+    font-size: 40px;
+}
+
+.intro-adopt p{
+    color: #ffffff;
+    font-weight: 400;
 }
