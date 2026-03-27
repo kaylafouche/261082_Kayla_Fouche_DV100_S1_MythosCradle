@@ -7,46 +7,433 @@
     <meta name="keywords" content="Adoption, mythical creatures, basilisk, dragon, baby">
     <meta name="author" content="Kayla Fouche 261082">
 
-    <title>Adopt | Mythos Cradle</title>
+    <title>Adopt</title>
 
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Metamorphous&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Metamorphous&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/main.css">
 
 </head>
 <body>
 
-    <!-- NAVBAR -->
- <header>
+<!-- NAVBAR -->
+    <header>
         <nav class="navbar">
-
             <div class="logo">
-                <img src="../assets/img/logo.png">
+                <a href="../index.html">
+                <img src="../assets/img/logo.png"></a>
             </div>
-
             <div class="navLinks">
                 <a href="../index.html">Home</a>
-                <a href="#">Adopt</a>
-                <a href="pages/contact.html">Contact</a>
+                <a href="#" class="active">Adopt</a>
+                <a href="../pages/contact.html">Contact</a>
+            </div>
+            <div class="search">
+                <button class="searchItem"> <i class="fa-solid fa-magnifying-glass" style="color: #666666;"></i></button>
+                <input class="searchItem bar" type="search" placeholder="Search" style="font-size: 14px;">
+                <button class="searchItem"><i class="fa-solid fa-basket-shopping fa-lg" style="color: #333333;"></i><i class="fa-solid fa-circle fa-xl" style="color: rgb(0, 217, 249);"></i></button>
+            </div>
+        </nav>
+    </header>
+
+<!-- HERO SECTION -->
+    <section class="hero-adopt">
+        <h1>Adopt a Creature</h1>
+    </section>
+
+<!-- INTRO SECTION -->
+    <section class="intro-adopt">
+        <h2>Your journey with a little legend begins here.</h2>
+        <p>Adopting a little legend doesn't cost a thing - our focus is finding loving homes. To make their arrival extra special, you can choose<br>optional starter packages made just for your creature: tiny beds, treats, toys, and more. You can even get multiple packages if your<br> legend will have indoor and outdoor spaces. After you complete your application, we'l arrange a magical meeting so you can see<br> which creature is the perfect fit. We've also included a beginners friendly rating with our creatures so that you can gauge if you are<br> ready to make them a part of your family.</p>
+    </section>
+
+<!--FILTER BAR-->
+    <section class="filterBar">
+        <div class="filterGroup">
+            <div class="filterElement">
+                <i class="fa fa-sliders"></i> Filter
+            </div>
+            <div class="filterElement grid-icon">
+                <i class="fa fa-th-large"></i>
+            </div>
+            <div class="bar2">
+                Showing 1–16 of 32 results
+            </div>
+        </div>
+        <div class="filterElement right">
+            <span>Show</span>
+            <button class="results">6</button>
+            <span>Short by</span>
+            <button class="sortBy">Default</button>
+        </div>
+    </section>
+
+<!-- ADOPTION SECTION -->
+    <section class="white">
+        <div class="adoptionContainer">
+            <div class="flex2ColAdoption">
+                <img src="../assets/img/adopt1.png" width="80%">
+            </div>
+            <div class="flex2ColAdoption">
+                <h1>Blue Dragon - Azuron</h1>
+            <div class="simpleRowFlex">
+                <p>R 2500.00</p>
+                <p><s>R5000.00</s></p>
+            </div>
+            <div class="simpleRowFlex">
+                <div>
+                    <p><i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i></p>
+                </div>
+                <p> | </p>
+                <p>Friendly Ally</p>
             </div>
 
-        <div class="navIcons">
-            <input type="text" placeholder="Search">
-            <i class="bi bi-basket2-fill"></i>
+            <p>Azuron is a curious little dragon with a spark of mischief in his eyes. He<br>loves exploring hidden nooks and curling up in warm spots after a playful flight, leaving tiny trails of blue sparks wherever he goes. He thrives on attention and gentle play, and his favorite games invole chasing floating spark orbs around the room.</p>
+
+            <div class="qty-selector">
+                <button class="minus-btn" onclick="adjustValue(-1)">-</button>
+                <input type="number" class="qty-input" value="1" min="1" max="10">
+                <button class="plus-btn" onclick="adjustValue(1)">+</button>
+            
+                <button class="action-btn">Add to Cradle</button>
+            </div>
+
+            <div class="infoItems">
+                <div class="infoRow">
+                    <div class="infoLabel">Bed</div>
+                     <div class="infoValue">: Cozy lava-foam bed</div>
+                </div>
+                <div class="infoRow">
+                    <div class="infoLabel">Treats</div>
+                     <div class="infoValue">: Frostberry treats</div>
+                </div>
+                <div class="infoRow">
+                    <div class="infoLabel">Toys</div>
+                     <div class="infoValue">: Flame-safe balls, Wing-wrangling hoops, Tiny treasure chests</div>
+                </div>
+                <div class="infoRow">
+                    <div class="infoLabel">Unique Item</div>
+                     <div class="infoValue">: Mini Fire Orb</div>
+                </div>
+            </div>
+            </div>
         </div>
-        </nav>
+    </section>
+    <section class="blue">
+        <div class="adoptionContainer">
+            <div class="flex2ColAdoption">
+                <img src="../assets/img/adopt2.png" width="80%">
+            </div>
+            <div class="flex2ColAdoption">
+                <h1>Kitsune - Yuki</h1>
+            <div class="simpleRowFlex">
+                <div class="price">
+                <p>R 4500.00</p>
+            </div>
+            </div>
+            <div class="simpleRowFlex">
+                <div>
+                    <p><i class="fa-solid  fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid  fa-star"></i></p>
+                </div>
+                <p> | </p>
+                <p>Gentle Guardian</p>
+            </div>
 
-     </header>
+            <p>Yuki is a mischievous yet loving fox spirit, full of curiosity and clever ideas.<br>She delights in playful tricks and quietly watching over her friends, her<br>tails swishing with contentment. Yuki especially enjoys interactive games<br>and hiding small trinkets to surprise her caretakers.
+            </p>
 
-      <!-- HERO SECTION -->
-      <section class="hero-adopt">
-            <h1>Adopt a Creature</h1>
-      </section>
+            <div class="qty-selector">
+                <button class="minus-btn" onclick="adjustValue(-1)">-</button>
+                <input type="number" class="qty-input" value="1" min="1" max="10">
+                <button class="plus-btn" onclick="adjustValue(1)">+</button>
+            
+                <button class="action-btn">Add to Cradle</button>
+            </div>
 
-      <!-- INTRO SECTION -->
-       <section class="intro-adopt">
-        <h2>Your journey with a little legend begins here.</h2>
-            <p>Adopting a little legend doesn't cost a thing - our focus is finding loving homes. To make their arrival extra special, you can choose<br>optional starter packages made just for your creature: tiny beds, treats, toys, and more. You can even get multiple packages if your<br> legend will have indoor and outdoor spaces. After you complete your application, we'l arrange a magical meeting so you can see<br> which creature is the perfect fit. We've also included a beginners friendly rating with our creatures so that you can gauge if you are<br> ready to make them a part of your family.</p>
-       </section>
+            <div class="infoItems">
+                <div class="infoRow">
+                    <div class="infoLabel">Bed</div>
+                     <div class="infoValue">: Silk-lined den bed</div>
+                </div>
+                <div class="infoRow">
+                    <div class="infoLabel">Treats</div>
+                     <div class="infoValue">: Moonfruit snacks</div>
+                </div>
+                <div class="infoRow">
+                    <div class="infoLabel">Toys</div>
+                     <div class="infoValue">: Puzzle cubes, Jingling bells, Magical ribbons</div>
+                </div>
+                <div class="infoRow">
+                    <div class="infoLabel">Unique Item</div>
+                     <div class="infoValue">: Mini Spirit Lantern</div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+    <section class="white">
+        <div class="adoptionContainer">
+            <div class="flex2ColAdoption">
+                <img src="../assets/img/adopt3.png" width="80%">
+            </div>
+            <div class="flex2ColAdoption">
+                <h1>Griffin - Aurelia</h1>
+            <div class="simpleRowFlex">
+                <p>R 6500.00</p>
+            </div>
+            <div class="simpleRowFlex">
+                <div>
+                    <p><i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i></p>
+                </div>
+                <p> | </p>
+                <p>Friendly Ally</p>
+            </div>
+
+            <p>Aurelia is a proud little griffin, courageous yet gentle. She loves climbing,
+                exploring high perches, and curling up near those she trusts, always<br>watching the world with wise golden eyes. She adores gentle games of<br>chase and loves to snow off her tiny but majestic wings.</p>
+
+            <div class="qty-selector">
+                <button class="minus-btn" onclick="adjustValue(-1)">-</button>
+                <input type="number" class="qty-input" value="1" min="1" max="10">
+                <button class="plus-btn" onclick="adjustValue(1)">+</button>
+            
+                <button class="action-btn">Add to Cradle</button>
+            </div>
+
+            <div class="infoItems">
+                <div class="infoRow">
+                    <div class="infoLabel">Bed</div>
+                     <div class="infoValue">: Feather-lined perch bed</div>
+                </div>
+                <div class="infoRow">
+                    <div class="infoLabel">Treats</div>
+                     <div class="infoValue">: Sunfruit treats</div>
+                </div>
+                <div class="infoRow">
+                    <div class="infoLabel">Toys</div>
+                     <div class="infoValue">: Wing rings, Soft talon toys, Mini prey plushies</div>
+                </div>
+                <div class="infoRow">
+                    <div class="infoLabel">Unique Item</div>
+                     <div class="infoValue">: Tiny Sunstone Perch</div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+    <section class="blue">
+        <div class="adoptionContainer">
+            <div class="flex2ColAdoption">
+                <img src="../assets/img/adopt4.png" width="80%">
+            </div>
+            <div class="flex2ColAdoption">
+                <h1>Water Wisp - Lumina</h1>
+            <div class="simpleRowFlex">
+                <div class="price">
+                <p>R 40,000.00</p>
+            </div>
+            </div>
+            <div class="simpleRowFlex">
+                <div>
+                    <p><i class="fa-solid  fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid  fa-star"></i>
+                        <i class="fa-solid  fa-star"></i></p>
+                </div>
+                <p> | </p>
+                <p>Beloved Companion</p>
+            </div>
+
+            <p>Lumina drifts like a shimmer of moonlight, soft and gentle. Playful and
+                curious, she glides through her surroundings, bringing calm and quiet magic wherever she goes. She loves to follow gentle ripples in water or
+                light games, leaving a faint glowing trail that enchants everyone nearby.</p>
+
+            <div class="qty-selector">
+                <button class="minus-btn" onclick="adjustValue(-1)">-</button>
+                <input type="number" class="qty-input" value="1" min="1" max="10">
+                <button class="plus-btn" onclick="adjustValue(1)">+</button>
+            
+                <button class="action-btn">Add to Cradle</button>
+            </div>
+
+            <div class="infoItems">
+                <div class="infoRow">
+                    <div class="infoLabel">Bed</div>
+                     <div class="infoValue">: Crystal bowl bed</div>
+                </div>
+                <div class="infoRow">
+                    <div class="infoLabel">Treats</div>
+                     <div class="infoValue">: Dewdrop nectar</div>
+                </div>
+                <div class="infoRow">
+                    <div class="infoLabel">Toys</div>
+                     <div class="infoValue">: Floating orbs, Ripple rings, Water bell</div>
+                </div>
+                <div class="infoRow">
+                    <div class="infoLabel">Unique Item</div>
+                     <div class="infoValue">: Mini Waterfall Sphere</div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+    <section class="white">
+        <div class="adoptionContainer">
+            <div class="flex2ColAdoption">
+                <img src="../assets/img/adopt5.png" width="80%">
+            </div>
+            <div class="flex2ColAdoption">
+                <h1>Pegasus - Starwind</h1>
+            <div class="simpleRowFlex">
+                <p>R 5000.00</p>
+            </div>
+            <div class="simpleRowFlex">
+                <div>
+                    <p><i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i></p>
+                </div>
+                <p> | </p>
+                <p>Gentle Guardian</p>
+            </div>
+
+            <p>Starwind is a gentle, curious Pegasus foal with a playful spirit. He loves<br>short flights and sunny naps, his gleaming wings always ready for<br>discovery. He enjoys small games of chase and nuzzles to show affection, quickly forming strong bonds with those he trusts.</p>
+
+            <div class="qty-selector">
+                <button class="minus-btn" onclick="adjustValue(-1)">-</button>
+                <input type="number" class="qty-input" value="1" min="1" max="10">
+                <button class="plus-btn" onclick="adjustValue(1)">+</button>
+            
+                <button class="action-btn">Add to Cradle</button>
+            </div>
+
+            <div class="infoItems">
+                <div class="infoRow">
+                    <div class="infoLabel">Bed</div>
+                     <div class="infoValue">: Soft cloud bed</div>
+                </div>
+                <div class="infoRow">
+                    <div class="infoLabel">Treats</div>
+                     <div class="infoValue">: Starhay treats</div>
+                </div>
+                <div class="infoRow">
+                    <div class="infoLabel">Toys</div>
+                     <div class="infoValue">: Flying hoops, Feathered balls, Small riding saddle</div>
+                </div>
+                <div class="infoRow">
+                    <div class="infoLabel">Unique Item</div>
+                     <div class="infoValue">: Mini Wind Hoof Ball</div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+    <section class="blue">
+        <div class="adoptionContainer">
+            <div class="flex2ColAdoption">
+                <img src="../assets/img/adopt6.png" width="80%">
+            </div>
+            <div class="flex2ColAdoption">
+                <h1>Forest Spirit - Briar</h1>
+            <div class="simpleRowFlex">
+                <div class="price">
+                <p>R 3500.00</p>
+            </div>
+            </div>
+            <div class="simpleRowFlex">
+                <div>
+                    <p><i class="fa-solid  fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid  fa-star"></i>
+                        <i class="fa-solid  fa-star"></i></p>
+                </div>
+                <p> | </p>
+                <p>Beloved Companion</p>
+            </div>
+
+            <p>Briar is a tiny guardian of the woods, curious, gentle, and full of life. He<br>loves leafy hideaways and quietly exploring gardens, always humming<br>with a touch of magic. He enjoys collecting small natural treasures and bringing them to his caretakers as gifts, showing his playful personality.</p>
+
+            <div class="qty-selector">
+                <button class="minus-btn" onclick="adjustValue(-1)">-</button>
+                <input type="number" class="qty-input" value="1" min="1" max="10">
+                <button class="plus-btn" onclick="adjustValue(1)">+</button>
+            
+                <button class="action-btn">Add to Cradle</button>
+            </div>
+
+            <div class="infoItems">
+                <div class="infoRow">
+                    <div class="infoLabel">Bed</div>
+                     <div class="infoValue">: Crystal bowl bed</div>
+                </div>
+                <div class="infoRow">
+                    <div class="infoLabel">Treats</div>
+                     <div class="infoValue">: Dewdrop nectar</div>
+                </div>
+                <div class="infoRow">
+                    <div class="infoLabel">Toys</div>
+                     <div class="infoValue">: Floating orbs, Ripple rings, Water bell</div>
+                </div>
+                <div class="infoRow">
+                    <div class="infoLabel">Unique Item</div>
+                     <div class="infoValue">: Mini Waterfall Sphere</div>
+                </div>
+            </div>
+            <button class="btn-view-cradle">View Cradle</button>
+            </div>
+        </div>
+    </section>
+
+<!-- FOOTER -->
+    <footer class="footer">
+        <div class="footerTop"> 
+            <div class="footerLogo">
+            <img src="../assets/img/logo.png">
+            <p>Where every legendary creature<br> finds a loving home.+</p>
+        </div>
+        <div class="footerLinks">
+            <h4>Company</h4>
+            <a href="../index.html">Home</a>
+            <a href="#">Adopt</a>
+            <a href="../pages/contact.html">Contact Us</a>
+        </div>
+        <div class="socialLinks">
+            <h4>Social Media Links</h4>
+            <div class="icons">
+                <a href="https://www.facebook.com/share/18RtWWFNUW/?mibextid=wwXIfr">
+                    <img src="../assets/img/sm1.png">
+                </a>
+                <a href="https://www.tiktok.com/@open_window_?lang=en-GB&is_from_webapp=1&sender_device=mobile&sender_web_id=7612261629393372688">
+                    <img src="../assets/img/sm2.png">
+                </a>
+                <a href="https://www.instagram.com/openwindowinstitute?igsh=MWlkZ24zYTFsaDAwbQ==">
+                    <img src="../assets/img/sm3.png">
+                </a>
+                <a href="https://x.com/open_window_?s=11">
+                    <img src="../assets/img/sm4.png">
+                </a>
+                </div>
+            </div>
+        </div>
+            <div class="footerBottom">
+                <p>All Rights Reserved &copy Open Window 2024</p>
+                <p>Terms & Conditions Privacy Policy</p>
+            </div>
+    </footer>
+
+
+<script src="https://kit.fontawesome.com/45d4142b5b.js" crossorigin="anonymous"></script>
+</body>
+</html>

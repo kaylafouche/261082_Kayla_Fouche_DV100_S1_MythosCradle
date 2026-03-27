@@ -4,17 +4,143 @@
     <meta charset="UTF-8">
     <meta http-equiv="x-UA-Compatible" content="IE-edge">
     <meta name="viewport" content="width-device-width, initial-scale-1.0">
-    <meta name="keywords" content="template, initial setup, html, css, links, futureUse">
+    <meta name="keywords" content="Adoption, mythical creatures, basilisk, dragon, baby">
     <meta name="author" content="Kayla Fouche 261082">
 
-    <title>Mythos Cradle</title>
+    <title>Contact Us</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Metamorphous&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/main.css">
 
 </head>
 <body>
 
+<!-- NAVBAR -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="../assets/img/logo.png">
+            </div>
+            <div class="navLinks">
+                <a href="../index.html">Home</a>
+                <a href="../pages/adopt.html">Adopt</a>
+                <a href="#" class="active">Contact</a>
+            </div>
+            <div class="search">
+                <button class="searchItem"><i class="fa-solid fa-magnifying-glass" style="color: #666666;"></i></button>
+                <input class="searchItem bar" type="search" placeholder="Search" style="font-size: 14px; font-weight: 400;">
+                <button class="searchItem"><i class="fa-solid fa-basket-shopping fa-lg" style="color: #333333;"></i><i class="fa-solid fa-circle fa-xl" style="color: rgb(0, 217, 249);"></i></button>
+            </div>
+        </nav>
+    </header>
+
+<!-- HERO SECTION -->
+    <section class="hero-contact">
+        <h1>Contact Us</h1>
+    </section>
+
+<!-- MORE INFO -->
+ <section class="about">
+        <div class="aboutContainer">
+            <div class="flex2Col">
+                <h5>ABOUT</h5>
+                <h2>Mythos Cradle</h2>
+                <p>Welcome to The Mythos Cradle, where we are dedicated to nurturing<br>the next generation of legendary companions into loving homes. As a<br>sanctuary and adoption agency, we specialize in connecting families<br>with magical creatures, carefully matching each little legend to the<br>caretakers who will best support their growth and well-being. From<br>playful blue dragons to gentle forest spirits, every adoption is<br>designed to foster wonder, curiosity, and companionship. With a<br>commitment to ethical care, safety, and magical enrichment, we<br>strive to create joyful experiences for both creatures and their new<br>families. Join us as we celebrate the enchantment of mythology and<br>turn legendary beings into cherished members of your household.</p>
+            </div>
+            <div class="flex2Col">
+                <img src="../assets/img/contactImage 1.png" width="95%" height="500px">
+            </div>
+        </div>
+    </section>
+    <section class="contactSection">
+        <div class="contactContainer">
+            <div class="contactInfo">
+                <h5>CONTACT US THROUGH OUR</h5>
+                <h2>SOCIAL MEDIA PAGES</h2>
+            <div class="icons">
+                 <a href="https://www.facebook.com/share/18RtWWFNUW/?mibextid=wwXIfr">
+                    <img src="../assets/img/sm1.png">
+                </a>
+                <a href="https://www.tiktok.com/@open_window_?lang=en-GB&is_from_webapp=1&sender_device=mobile&sender_web_id=7612261629393372688">
+                    <img src="../assets/img/sm2.png">
+                </a>
+                <a href="https://www.instagram.com/openwindowinstitute?igsh=MWlkZ24zYTFsaDAwbQ==">
+                    <img src="../assets/img/sm3.png">
+                </a>
+                <a href="https://x.com/open_window_?s=11">
+                    <img src="../assets/img/sm4.png">
+                </a>
+            </div>
+
+                <h5>OR VISIT US AT OUR</h5>
+                <h2>PHYSICAL LOCATION</h2>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3589.317263240937!2d28.20683857595635!3d-25.891938951330353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e956608911ce097%3A0x519896b4b6eda40a!2sOpen%20Window%20-%20Centurion!5e0!3m2!1sen!2sza!4v1773837786075!5m2!1sen!2sza" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="contactForm">
+                <form>
+                    <h2>SEND US A MESSAGE</h2>
+                    <div class="formElement">
+                        <label for="Name">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="Abc" required />
+                    </div>
+                    <div class="formElement">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Abc@def.com" required />
+                    </div>
+                    <div class="formElement">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="This is an optional"/>
+                    </div>
+                    <div class="formElement">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Hi! I'd like to ask about" required></textarea>
+                    </div>
+                    <button type="Submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+<!-- FOOTER -->
+    <footer class="footer">
+        <div class="footerTop"> 
+            <div class="footerLogo">
+            <img src="../assets/img/logo.png">
+            <p>Where every legendary creature<br> finds a loving home.+</p>
+        </div>
+        <div class="footerLinks">
+            <h4>Company</h4>
+            <a href="../index.html">Home</a>
+            <a href="../pages/adopt.html">Adopt</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <div class="socialLinks">
+            <h4>Social Media Links</h4>
+            <div class="icons">
+                <a href="https://www.facebook.com/share/18RtWWFNUW/?mibextid=wwXIfr">
+                    <img src="../assets/img/sm1.png">
+                </a>
+                <a href="https://www.tiktok.com/@open_window_?lang=en-GB&is_from_webapp=1&sender_device=mobile&sender_web_id=7612261629393372688">
+                    <img src="../assets/img/sm2.png">
+                </a>
+                <a href="https://www.instagram.com/openwindowinstitute?igsh=MWlkZ24zYTFsaDAwbQ==">
+                    <img src="../assets/img/sm3.png">
+                </a>
+                <a href="https://x.com/open_window_?s=11">
+                    <img src="../assets/img/sm4.png">
+                </a>
+                </div>
+            </div>
+        </div>
+            <div class="footerBottom">
+                <p>All Rights Reserved &copy Open Window 2024</p>
+                <p>Terms & Conditions Privacy Policy</p>
+            </div>
+    </footer>
 
 
+<script src="https://kit.fontawesome.com/45d4142b5b.js" crossorigin="anonymous"></script>
 </body>
 </html>
