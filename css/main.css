@@ -646,17 +646,18 @@ i{
 }
 
 .btn-view-cradle {
-  background-color: #e9ad1c; 
-  opacity: 90%;
-  color: #ffffff;            
-  padding: 30px 80px;        
-  border: none;              
-  border-radius: 8px;        
-  font-size: 20px;           
-  font-weight: 600;          
-  cursor: pointer;           
-  float: right;              
-  margin-top: 20px;          
+    position: fixed;
+    bottom: 450px;
+    right: 20px;
+    background-color: #e9ad1c; 
+    opacity: 90%;
+    color: #ffffff;            
+    padding: 30px 80px;        
+    border: none;              
+    border-radius: 8px;        
+    font-size: 20px;           
+    font-weight: 600;          
+    cursor: pointer;                           
 }
 
 .btn-view-cradle:hover {
