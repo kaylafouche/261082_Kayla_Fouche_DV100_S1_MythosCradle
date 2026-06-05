@@ -387,7 +387,7 @@
             <div class="qty-selector">
                 <button class="minus-btn" onclick="adjustValue(-1, 'qty-briar')">-</button>
                 <div class="qty-input" id="qty-briar" min="1" max="10">1</div> 
-                <button class="plus-btn" onclick="adjustValue(1, 'qty-brair')">+</button>
+                <button class="plus-btn" onclick="adjustValue(1, 'qty-briar')">+</button>
             
                 <button class="action-btn" onclick="addToCart('Forest Spirit - Briar', 3500.00, this.parentElement.querySelector('.qty-input'))">
                 Add to Cradle
@@ -455,21 +455,29 @@
             </div>
     </footer>
 
-        <div id="cartModal" class="cart-modal">
-            <div class="cart-content">
-                <div class="cart-header">
-                    <h2>Your Cradle</h2>
-                    <button onclick="closeCart()" class="close-btn">&times;</button>
-                </div>
+      <div id="cartModal" class="cart-modal">
+    <div class="cart-content">
+       
+        <div class="cart-header">
+            <h2>Your Cradle</h2>
+            <button onclick="closeCart()" class="close-btn" title="Close cart">&times;</button>
+        </div>
 
-            <div id="cart-items"></div>
+        <div id="cart-items"></div>
 
-                <div class="cart-footer">
-                    <h3>Total: R <span id="cart-total">0</span></h3>
-                    <button class="checkout-btn">Checkout</button>
-                </div>
+        <div class="cart-footer">
+            <h3>Total: R <span id="cart-total">0</span></h3>
+            <div class="cart-footer-buttons">
+                <button class="continue-searching-btn" onclick="continueSearchingHome()" title="Continue searching">
+                    Continue Searching
+                </button>
+                <button class="checkout-btn" onclick="proceedToCheckout()" title="Proceed to checkout">
+                    Finish Adoption
+                </button>
             </div>
         </div>
+    </div>
+</div>
 
 <script src="https://kit.fontawesome.com/45d4142b5b.js" crossorigin="anonymous"></script>
 <script src="../js/script.js"></script>
