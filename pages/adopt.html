@@ -30,10 +30,19 @@
                 <a href="#" class="active">Adopt</a>
                 <a href="contact.html">Contact</a>
             </div>
-            <div class="search">
-                <button class="searchItem"> <i class="fa-solid fa-magnifying-glass" style="color: #666666;"></i></button>
-                <input class="searchItem bar" type="search" placeholder="Search" style="font-size: 14px;">
-                <button class="searchItem"><i class="fa-solid fa-basket-shopping fa-lg" style="color: #333333;"></i><i class="fa-solid fa-circle fa-xl" style="color: rgb(0, 217, 249);"></i></button>
+            <div class="search-box">
+                <div class="row">
+                    <div class="search">
+                        <button class="searchItem">
+                            <i class="fa-solid fa-magnifying-glass" style="color: #666666;"></i>
+                        </button>
+                        <input class="searchItem bar" type="text" id="input-box" placeholder="Search" autocomplete="off" style="font-size: 14px; font-weight: 400;">
+                        <button class="searchItem cart-btn" onclick="openCart()">
+                            <i class="fa-solid fa-basket-shopping fa-lg" style="color: #333333;"></i>
+                            <span id="cart-count">0</span>
+                        </button>
+                    </div>
+                </div>
             </div>
         </nav>
     </header>
@@ -95,11 +104,13 @@
             <p>Azuron is a curious little dragon with a spark of mischief in his eyes. He<br>loves exploring hidden nooks and curling up in warm spots after a playful flight, leaving tiny trails of blue sparks wherever he goes. He thrives on attention and gentle play, and his favorite games invole chasing floating spark orbs around the room.</p>
 
             <div class="qty-selector">
-                <button class="minus-btn" onclick="adjustValue(-1)">-</button>
-                <input type="number" class="qty-input" value="1" min="1" max="10">
-                <button class="plus-btn" onclick="adjustValue(1)">+</button>
+                <button class="minus-btn" onclick="adjustValue(-1, 'qty-azuron')">-</button>
+                <div class="qty-input" id="qty-azuron" min="1" max="10">1</div> 
+                <button class="plus-btn" onclick="adjustValue(1, 'qty-azuron')">+</button>
             
-                <button class="action-btn">Add to Cradle</button>
+                <button class="action-btn" onclick="addToCart('Blue Dragon - Azuron', 2500.00, this.parentElement.querySelector('.qty-input'))">
+                Add to Cradle
+                </button>
             </div>
 
             <div class="infoItems">
@@ -150,11 +161,13 @@
             </p>
 
             <div class="qty-selector">
-                <button class="minus-btn" onclick="adjustValue(-1)">-</button>
-                <input type="number" class="qty-input" value="1" min="1" max="10">
-                <button class="plus-btn" onclick="adjustValue(1)">+</button>
+                <button class="minus-btn" onclick="adjustValue(-1, 'qty-yuki')">-</button>
+                <div class="qty-input" id="qty-yuki" min="1" max="10">1</div> 
+                <button class="plus-btn" onclick="adjustValue(1,'qty-yuki')">+</button>
             
-                <button class="action-btn">Add to Cradle</button>
+                <button class="action-btn" onclick="addToCart('Kitsune - Yuki', 4500.00, this.parentElement.querySelector('.qty-input'))">
+                Add to Cradle
+                </button>
             </div>
 
             <div class="infoItems">
@@ -202,11 +215,13 @@
                 exploring high perches, and curling up near those she trusts, always<br>watching the world with wise golden eyes. She adores gentle games of<br>chase and loves to snow off her tiny but majestic wings.</p>
 
             <div class="qty-selector">
-                <button class="minus-btn" onclick="adjustValue(-1)">-</button>
-                <input type="number" class="qty-input" value="1" min="1" max="10">
-                <button class="plus-btn" onclick="adjustValue(1)">+</button>
+                <button class="minus-btn" onclick="adjustValue(-1, 'qty-aurelia')">-</button>
+                <div class="qty-input" id="qty-aurelia" min="1" max="10">1</div> 
+                <button class="plus-btn" onclick="adjustValue(1, 'qty-aurelia')">+</button>
             
-                <button class="action-btn">Add to Cradle</button>
+                <button class="action-btn" onclick="addToCart('Griffin - Aurelia', 6500.00, this.parentElement.querySelector('.qty-input'))">
+                Add to Cradle
+                </button>
             </div>
 
             <div class="infoItems">
@@ -259,11 +274,13 @@
                 light games, leaving a faint glowing trail that enchants everyone nearby.</p>
 
             <div class="qty-selector">
-                <button class="minus-btn" onclick="adjustValue(-1)">-</button>
-                <input type="number" class="qty-input" value="1" min="1" max="10">
-                <button class="plus-btn" onclick="adjustValue(1)">+</button>
+                <button class="minus-btn" onclick="adjustValue(-1, 'qty-lumina')">-</button>
+                <div class="qty-input" id="qty-lumina" min="1" max="10">1</div> 
+                <button class="plus-btn" onclick="adjustValue(1, 'qty-lumina')">+</button>
             
-                <button class="action-btn">Add to Cradle</button>
+                <button class="action-btn" onclick="addToCart('Water Wisp - Lumina', 40000.00, this.parentElement.querySelector('.qty-input'))">
+                Add to Cradle
+                </button>
             </div>
 
             <div class="infoItems">
@@ -311,11 +328,13 @@
             <p>Starwind is a gentle, curious Pegasus foal with a playful spirit. He loves<br>short flights and sunny naps, his gleaming wings always ready for<br>discovery. He enjoys small games of chase and nuzzles to show affection, quickly forming strong bonds with those he trusts.</p>
 
             <div class="qty-selector">
-                <button class="minus-btn" onclick="adjustValue(-1)">-</button>
-                <input type="number" class="qty-input" value="1" min="1" max="10">
-                <button class="plus-btn" onclick="adjustValue(1)">+</button>
+                <button class="minus-btn" onclick="adjustValue(-1, 'qty-starwind')">-</button>
+                <div class="qty-input" id="qty-starwind" min="1" max="10">1</div> 
+                <button class="plus-btn" onclick="adjustValue(1, 'qty-starwind')">+</button>
             
-                <button class="action-btn">Add to Cradle</button>
+                <button class="action-btn" onclick="addToCart('Pegasus - Starwind', 5000.00, this.parentElement.querySelector('.qty-input'))">
+                Add to Cradle
+                </button>
             </div>
 
             <div class="infoItems">
@@ -366,11 +385,13 @@
             <p>Briar is a tiny guardian of the woods, curious, gentle, and full of life. He<br>loves leafy hideaways and quietly exploring gardens, always humming<br>with a touch of magic. He enjoys collecting small natural treasures and bringing them to his caretakers as gifts, showing his playful personality.</p>
 
             <div class="qty-selector">
-                <button class="minus-btn" onclick="adjustValue(-1)">-</button>
-                <input type="number" class="qty-input" value="1" min="1" max="10">
-                <button class="plus-btn" onclick="adjustValue(1)">+</button>
+                <button class="minus-btn" onclick="adjustValue(-1, 'qty-briar')">-</button>
+                <div class="qty-input" id="qty-briar" min="1" max="10">1</div> 
+                <button class="plus-btn" onclick="adjustValue(1, 'qty-brair')">+</button>
             
-                <button class="action-btn">Add to Cradle</button>
+                <button class="action-btn" onclick="addToCart('Forest Spirit - Briar', 3500.00, this.parentElement.querySelector('.qty-input'))">
+                Add to Cradle
+                </button>
             </div>
 
             <div class="infoItems">
@@ -391,7 +412,7 @@
                      <div class="infoValue">: Mini Waterfall Sphere</div>
                 </div>
             </div>
-            <button class="btn-view-cradle">View Cradle</button>
+            <button class="btn-view-cradle" onclick="openCart()">View Cradle</button>
             </div>
         </div>
     </section>
@@ -400,9 +421,10 @@
     <footer class="footer">
         <div class="footerTop"> 
             <div class="footerLogo">
-            <img src="../assets/img/logo.png">
-            <p>Where every legendary creature<br> finds a loving home.+</p>
-        </div>
+                <a href="../index.html">
+                <img src="../assets/img/logo.png"></a>
+                <p>Where every legendary creature<br> finds a loving home.+</p>
+            </div>
         <div class="footerLinks">
             <h4>Company</h4>
             <a href="../index.html">Home</a>
@@ -433,7 +455,23 @@
             </div>
     </footer>
 
+        <div id="cartModal" class="cart-modal">
+            <div class="cart-content">
+                <div class="cart-header">
+                    <h2>Your Cradle</h2>
+                    <button onclick="closeCart()" class="close-btn">&times;</button>
+                </div>
+
+            <div id="cart-items"></div>
+
+                <div class="cart-footer">
+                    <h3>Total: R <span id="cart-total">0</span></h3>
+                    <button class="checkout-btn">Checkout</button>
+                </div>
+            </div>
+        </div>
 
 <script src="https://kit.fontawesome.com/45d4142b5b.js" crossorigin="anonymous"></script>
+<script src="../js/script.js"></script>
 </body>
 </html>

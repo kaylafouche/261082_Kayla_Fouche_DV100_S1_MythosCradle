@@ -22,17 +22,27 @@
     <header>
         <nav class="navbar">
             <div class="logo">
-                <img src="../assets/img/logo.png">
+                <a href="../index.html">
+                <img src="../assets/img/logo.png"></a>
             </div>
             <div class="navLinks">
                 <a href="../index.html">Home</a>
                 <a href="adopt.html">Adopt</a>
                 <a href="#" class="active">Contact</a>
             </div>
-            <div class="search">
-                <button class="searchItem"><i class="fa-solid fa-magnifying-glass" style="color: #666666;"></i></button>
-                <input class="searchItem bar" type="search" placeholder="Search" style="font-size: 14px; font-weight: 400;">
-                <button class="searchItem"><i class="fa-solid fa-basket-shopping fa-lg" style="color: #333333;"></i><i class="fa-solid fa-circle fa-xl" style="color: rgb(0, 217, 249);"></i></button>
+            <div class="search-box">
+                <div class="row">
+                    <div class="search">
+                        <button class="searchItem">
+                            <i class="fa-solid fa-magnifying-glass" style="color: #666666;"></i>
+                        </button>
+                        <input class="searchItem bar" type="text" id="input-box" placeholder="Search" autocomplete="off" style="font-size: 14px; font-weight: 400;">
+                        <button class="searchItem cart-btn" onclick="openCart()">
+                            <i class="fa-solid fa-basket-shopping fa-lg" style="color: #333333;"></i>
+                            <span id="cart-count">0</span>
+                        </button>
+                    </div>
+                </div>
             </div>
         </nav>
     </header>
@@ -51,7 +61,7 @@
                 <p>Welcome to The Mythos Cradle, where we are dedicated to nurturing<br>the next generation of legendary companions into loving homes. As a<br>sanctuary and adoption agency, we specialize in connecting families<br>with magical creatures, carefully matching each little legend to the<br>caretakers who will best support their growth and well-being. From<br>playful blue dragons to gentle forest spirits, every adoption is<br>designed to foster wonder, curiosity, and companionship. With a<br>commitment to ethical care, safety, and magical enrichment, we<br>strive to create joyful experiences for both creatures and their new<br>families. Join us as we celebrate the enchantment of mythology and<br>turn legendary beings into cherished members of your household.</p>
             </div>
             <div class="flex2Col">
-                <img src="../assets/img/contactImage 1.png" width="95%" height="500px">
+                <img src="../assets/img/contactImage 1.png" width="100%">
             </div>
         </div>
     </section>
@@ -107,9 +117,10 @@
     <footer class="footer">
         <div class="footerTop"> 
             <div class="footerLogo">
-            <img src="../assets/img/logo.png">
-            <p>Where every legendary creature<br> finds a loving home.+</p>
-        </div>
+                <a href="../index.html">
+                <img src="../assets/img/logo.png"></a>
+                <p>Where every legendary creature<br> finds a loving home.+</p>
+            </div>
         <div class="footerLinks">
             <h4>Company</h4>
             <a href="../index.html">Home</a>
@@ -140,7 +151,22 @@
             </div>
     </footer>
 
+        <div id="cartModal" class="cart-modal">
+            <div class="cart-content">
+                <div class="cart-header">
+                    <h2>Your Cradle</h2>
+                    <button onclick="closeCart()" class="close-btn">&times;</button>
+                </div>
+            <div id="cart-items"></div>
+                <div class="cart-footer">
+                    <h3>Total: R <span id="cart-total">0</span></h3>
+                    <button class="checkout-btn">Checkout</button>
+                </div>
+            </div>
+        </div>
+
 
 <script src="https://kit.fontawesome.com/45d4142b5b.js" crossorigin="anonymous"></script>
+<script src="../js/script.js"></script>
 </body>
 </html>

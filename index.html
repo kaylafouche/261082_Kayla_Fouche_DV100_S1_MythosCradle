@@ -22,7 +22,6 @@
     <header>
         <nav class="navbar">
             <div class="logo">
-                <a href="index.html">
                 <img src="assets/img/logo.png"></a>
             </div>
             <div class="navLinks">
@@ -30,10 +29,19 @@
                 <a href="pages/adopt.html">Adopt</a>
                 <a href="pages/contact.html">Contact</a>
             </div>
-            <div class="search">
-                <button class="searchItem"><i class="fa-solid fa-magnifying-glass" style="color: #666666;"></i></button>
-                <input class="searchItem bar" type="search" placeholder="Search" style="font-size: 14px; font-weight: 400;">
-                <button class="searchItem"><i class="fa-solid fa-basket-shopping fa-lg" style="color: #333333;"></i><i class="fa-solid fa-circle fa-xl" style="color: rgb(0, 217, 249);"></i></button>
+            <div class="search-box">
+                <div class="row">
+                    <div class="search">
+                        <button class="searchItem">
+                            <i class="fa-solid fa-magnifying-glass" style="color: #666666;"></i>
+                        </button>
+                        <input class="searchItem bar" type="text" id="input-box" placeholder="Search" autocomplete="off" style="font-size: 14px; font-weight: 400;">
+                        <button class="searchItem cart-btn" onclick="openCart()">
+                            <i class="fa-solid fa-basket-shopping fa-lg" style="color: #333333;"></i>
+                            <span id="cart-count">0</span>
+                        </button>
+                    </div>
+                </div>
             </div>
         </nav>
     </header>
@@ -89,7 +97,7 @@
                 <p>Discover our carefully nurtured mythical creatures,<br> each ready to join a loving family. Experience the<br> joy and wonder of forming a lasting bond, as every<br> adoption is guided with care, ensuring a safe,<br>ethical, and heartwarming journey for both<br> creature and caretaker.</p>
             </div>
             <div class="flex2Col">
-                <img src="assets/img/homeImg1.png" width="100%" height="450vh">
+                <img src="assets/img/homeImg1.png" width="100%">
             </div>
         </div>
     </section>
@@ -127,9 +135,10 @@
     <footer class="footer">
         <div class="footerTop"> 
             <div class="footerLogo">
-            <img src="assets/img/logo.png">
-            <p>Where every legendary creature<br> finds a loving home.+</p>
-        </div>
+                <a href="index.html">
+                <img src="assets/img/logo.png"></a>
+                <p>Where every legendary creature<br> finds a loving home.+</p>
+            </div>
         <div class="footerLinks">
             <h4>Company</h4>
             <a href="#">Home</a>
@@ -160,7 +169,23 @@
             </div>
     </footer>
 
+        <div id="cartModal" class="cart-modal">
+            <div class="cart-content">
+                <div class="cart-header">
+                    <h2>Your Cradle</h2>
+                    <button onclick="closeCart()" class="close-btn">&times;</button>
+                </div>
+            <div id="cart-items"></div>
+                <div class="cart-footer">
+                    <h3>Total: R <span id="cart-total">0</span></h3>
+                    <button class="checkout-btn">Checkout</button>
+                </div>
+            </div>
+        </div>
+
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 <script src="https://kit.fontawesome.com/45d4142b5b.js" crossorigin="anonymous"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
