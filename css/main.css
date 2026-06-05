@@ -1,7 +1,9 @@
-body{
+html, body{
     margin: 0;
+    padding: 0;
     font-family: "Poppins", sans-serif;
     font-size: 16px;
+    overflow-x: hidden;
 }
 
 img{
@@ -795,11 +797,314 @@ i{
 .contactForm h2{
     font-weight: bold;
 }
-
-.icons{
-    padding-bottom: 80px;
+ 
+/* Contact Form Section */
+.contactForm form {
+    display: flex;
+    flex-direction: column;
+    background-image: url("../assets/img/formBackground.png");
+    background-color: #f4f4f4;
+    padding: 40px;
+    border-radius: 20px;
+    gap: 15px;
+    color: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
-
+ 
+.contactForm h2 {
+    font-weight: bold;
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+ 
+/* Form Elements */
+.formElement {
+    width: 100%;
+    padding: 10px;
+}
+ 
+.formElement label {
+    display: block;
+    color: #ffffff;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 14px;
+}
+ 
+.contactForm input,
+.contactForm textarea {
+    width: 100%;
+    padding: 15px 15px;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+ 
+.contactForm input:focus,
+.contactForm textarea:focus {
+    outline: none;
+    background-color: #f0f0f0;
+    box-shadow: 0 0 0 3px rgba(21, 213, 245, 0.2);
+}
+ 
+.contactForm textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+ 
+/* Submit Button */
+.contactForm button {
+    background-color: #15d5f5;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 40px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    width: fit-content;
+    margin-top: 10px;
+    align-self: flex-start;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+ 
+.contactForm button:hover {
+    background-color: #0fa0c4;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(21, 213, 245, 0.3);
+}
+ 
+.contactForm button:active {
+    transform: translateY(0);
+}
+ 
+/* ============================================
+   THANK YOU MODAL STYLES
+   ============================================ */
+ 
+/* Modal Overlay */
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease;
+}
+ 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+ 
+/* Modal Container */
+.thankYouModal {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 40px;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 10px 40px rgba(0, 45, 104, 0.2);
+    position: relative;
+    animation: slideUp 0.3s ease;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+ 
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+ 
+/* Close Button (X) */
+.closeModal {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 32px;
+    color: #999;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: bold;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+ 
+.closeModal:hover {
+    color: #15d5f5;
+    background-color: #f0f0f0;
+}
+ 
+/* Modal Title */
+.thankYouModal h2 {
+    color: #15d5f5;
+    font-size: 32px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+ 
+/* Modal Message */
+.thankYouModal p {
+    color: #333;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+ 
+.thankYouModal p strong {
+    color: #002d68;
+    font-weight: 600;
+}
+ 
+/* Modal Button */
+.thankYouModal .btn-primary {
+    background-color: #15d5f5;
+    color: white;
+    padding: 12px 40px;
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: 'Poppins', sans-serif;
+}
+ 
+.thankYouModal .btn-primary:hover {
+    background-color: #0fa0c4;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(21, 213, 245, 0.3);
+}
+ 
+.thankYouModal .btn-primary:active {
+    transform: translateY(0);
+}
+ 
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+ 
+@media (max-width: 1024px) {
+    .contactContainer {
+        gap: 30px;
+        padding: 40px 20px;
+    }
+ 
+    .contactInfo, .contactForm {
+        width: 50%;
+    }
+}
+ 
+@media (max-width: 768px) {
+    .contactContainer {
+        flex-direction: column;
+        gap: 40px;
+        padding: 30px 20px;
+    }
+ 
+    .contactInfo, .contactForm {
+        width: 100%;
+    }
+ 
+    .contactInfo h2 {
+        font-size: 28px;
+    }
+ 
+    .contactForm form {
+        padding: 30px 20px;
+    }
+ 
+    .contactForm h2 {
+        font-size: 24px;
+    }
+ 
+    .thankYouModal {
+        padding: 30px 20px;
+        max-width: 90%;
+    }
+ 
+    .thankYouModal h2 {
+        font-size: 26px;
+    }
+ 
+    .thankYouModal p {
+        font-size: 15px;
+    }
+}
+ 
+@media (max-width: 480px) {
+    .contactContainer {
+        padding: 20px 15px;
+    }
+ 
+    .contactForm form {
+        padding: 20px 15px;
+        gap: 12px;
+    }
+ 
+    .formElement {
+        padding: 5px;
+    }
+ 
+    .contactForm input,
+    .contactForm textarea {
+        padding: 12px 12px;
+        font-size: 13px;
+    }
+ 
+    .contactForm button {
+        padding: 12px 30px;
+        font-size: 14px;
+    }
+ 
+    .thankYouModal {
+        padding: 25px 15px;
+        width: 95%;
+    }
+ 
+    .thankYouModal h2 {
+        font-size: 22px;
+        margin-bottom: 12px;
+    }
+ 
+    .thankYouModal p {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+ 
+    .closeModal {
+        font-size: 28px;
+    }
+}
+ 
 .cart-modal {
     display: none;
     position: fixed;

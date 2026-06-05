@@ -307,3 +307,174 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
+let contactForm = document.querySelector(".contactForm form");
+let nameInput = document.getElementById("name");
+let emailInput = document.getElementById("email");
+let subjectInput = document.getElementById("subject");
+let messageInput = document.getElementById("message");
+
+// Load messages from localStorage (optional - stores all submissions)
+let messages = JSON.parse(localStorage.getItem("messages")) || [];
+
+/**
+ * Handle form submission
+ * Validates input, stores message, clears form, and shows thank you modal
+ */
+let addMessage = (event) => {
+    event.preventDefault();
+
+    let currentName = nameInput.value.trim();
+    let currentEmail = emailInput.value.trim();
+    let currentSubject = subjectInput.value.trim();
+    let currentMessage = messageInput.value.trim();
+
+    // Validate required fields
+    if (currentName === "" || currentEmail === "" || currentMessage === "") {
+        alert("Please fill in all required fields (Name, Email, Message)");
+        return;
+    }
+
+    // Validate email format
+    let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(currentEmail)) {
+        alert("Please enter a valid email address");
+        return;
+    }
+
+    // Create message object with timestamp
+    let messageData = {
+        id: Date.now(),
+        name: currentName,
+        email: currentEmail,
+        subject: currentSubject || "No subject",
+        message: currentMessage,
+        timestamp: new Date().toLocaleString()
+    };
+
+    // Store message in localStorage
+    messages.push(messageData);
+    localStorage.setItem("messages", JSON.stringify(messages));
+
+    // Log to console (optional - for debugging)
+    console.log("Message stored:", messageData);
+
+    // Clear form
+    contactForm.reset();
+
+    // Show thank you modal with user's name
+    showThankYouModal(currentName);
+};
+
+/**
+ * Display thank you modal with user's name
+ * @param {string} name - User's name from form input
+ */
+let showThankYouModal = (name) => {
+    // Create modal overlay (dark background)
+    let modalOverlay = document.createElement("div");
+    modalOverlay.classList.add("modalOverlay");
+
+    // Create modal content container
+    let modal = document.createElement("div");
+    modal.classList.add("thankYouModal");
+
+    // Create close button (X)
+    let closeBtn = document.createElement("button");
+    closeBtn.classList.add("closeModal");
+    closeBtn.innerText = "×";
+    closeBtn.type = "button";
+
+    // Create modal title
+    let title = document.createElement("h2");
+    title.innerText = "Thank You!";
+
+    // Create modal message with user's name
+    let message = document.createElement("p");
+    message.innerHTML = `Thank you for your message, <strong>${name}</strong>! We will get back to you soon.`;
+
+    // Create close button text
+    let closeTextBtn = document.createElement("button");
+    closeTextBtn.classList.add("btn-primary");
+    closeTextBtn.innerText = "Close";
+    closeTextBtn.type = "button";
+
+    // Close modal when Close button is clicked
+    closeTextBtn.addEventListener("click", () => {
+        modalOverlay.remove();
+    });
+
+    // Close modal when X button is clicked
+    closeBtn.addEventListener("click", () => {
+        modalOverlay.remove();
+    });
+
+    // Close modal when clicking outside the modal
+    modalOverlay.addEventListener("click", (e) => {
+        if (e.target === modalOverlay) {
+            modalOverlay.remove();
+        }
+    });
+
+    // Close modal with Escape key
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && modalOverlay.parentElement) {
+            modalOverlay.remove();
+        }
+    });
+
+    // Assemble modal
+    modal.appendChild(closeBtn);
+    modal.appendChild(title);
+    modal.appendChild(message);
+    modal.appendChild(closeTextBtn);
+    modalOverlay.appendChild(modal);
+    document.body.appendChild(modalOverlay);
+
+    // Focus on close button for accessibility
+    closeTextBtn.focus();
+};
+
+/**
+ * Retrieve stored messages from localStorage
+ * @returns {array} Array of message objects
+ */
+let getStoredMessages = () => {
+    return messages;
+};
+
+/**
+ * Clear all stored messages from localStorage
+ */
+let clearAllMessages = () => {
+    if (confirm("Are you sure you want to clear all messages? This cannot be undone.")) {
+        messages = [];
+        localStorage.setItem("messages", JSON.stringify(messages));
+        console.log("All messages cleared");
+    }
+};
+
+// Handle form submission
+contactForm.addEventListener("submit", addMessage);
+
+// Optional: Initialize on page load
+window.addEventListener("DOMContentLoaded", () => {
+    console.log("Contact form loaded successfully");
+    console.log("Stored messages:", messages.length);
+});
+
+// Optional: Disable submit button while form is submitting (prevent duplicate submissions)
+let formSubmitting = false;
+
+contactForm.addEventListener("submit", (e) => {
+    if (formSubmitting) {
+        e.preventDefault();
+        return;
+    }
+    formSubmitting = true;
+
+    // Re-enable button after a short delay
+    setTimeout(() => {
+        formSubmitting = false;
+    }, 500);
+});
