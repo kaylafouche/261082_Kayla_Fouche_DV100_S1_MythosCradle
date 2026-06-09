@@ -17,10 +17,6 @@ window.addEventListener('scroll', () => {
 
 let cart = [];
 
-/**
- * Adjust quantity values
- * Used for both adopt page counters and cart modal quantity selectors
- */
 function adjustValue(change, id) {
     // Cart modal counter (when id is a number - cart index)
     if (typeof id === 'number') {
@@ -249,9 +245,9 @@ function proceedToCheckout() {
     const currentPath = window.location.pathname;
     
     if (currentPath.includes('/pages/')) {
-        window.location.href = '../pages/checkout.html';
+        window.location.href = '../pages/home.html';
     } else {
-        window.location.href = 'pages/checkout.html';
+        window.location.href = 'pages/home.html';
     }
 }
 
@@ -431,7 +427,6 @@ let showThankYouModal = (name) => {
     modalOverlay.appendChild(modal);
     document.body.appendChild(modalOverlay);
 
-    // Focus on close button for accessibility
     closeTextBtn.focus();
 };
 
@@ -457,13 +452,11 @@ let clearAllMessages = () => {
 // Handle form submission
 contactForm.addEventListener("submit", addMessage);
 
-// Optional: Initialize on page load
 window.addEventListener("DOMContentLoaded", () => {
     console.log("Contact form loaded successfully");
     console.log("Stored messages:", messages.length);
 });
 
-// Optional: Disable submit button while form is submitting (prevent duplicate submissions)
 let formSubmitting = false;
 
 contactForm.addEventListener("submit", (e) => {
