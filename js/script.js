@@ -245,9 +245,9 @@ function proceedToCheckout() {
     const currentPath = window.location.pathname;
     
     if (currentPath.includes('/pages/')) {
-        window.location.href = '../pages/home.html';
+        window.location.href = '../index.html';
     } else {
-        window.location.href = 'pages/home.html';
+        window.location.href = 'index.html';
     }
 }
 
